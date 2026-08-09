@@ -6,11 +6,11 @@ RAIZ_PROJETO = Path(__file__).resolve().parent.parent
 
 # 2. Mapeamento genérico de todas as pastas que você usa
 APP_BANCO = RAIZ_PROJETO / "APP_BANCO"
-APP_ = RAIZ_PROJETO / "APP_RAG"
+APP= RAIZ_PROJETO / "APP_RAG"
 
 # Subpastas específicas
-PASTA_IMAGENS = APP_ / "front_end" / "imagens"
-PASTA_PROMPT = APP_ / "prompt"
+PASTA_IMAGENS = APP= RAIZ_PROJETO / "APP" / "front_end" / "imagens"
+PASTA_PROMPT = APP= RAIZ_PROJETO / "APP" / "prompt"
 
 # 3. Garante que as pastas de banco e arquivos existam no SO do usuário
 PASTA_BANCO_PROD = Path("pasta_banco_para_producao") / "banco_em_produção"
