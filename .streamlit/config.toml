@@ -1,0 +1,21 @@
+
+[client]
+toolbarMode = "minimal"
+
+[theme]
+base = "light"  # ou "dark"
+
+# Cor de fundo principal da página
+backgroundColor = "#fffbeb"
+
+
+# Fundo de widgets, caixas, etc.
+secondaryBackgroundColor = "#282a36"
+
+# Cor do texto
+textColor = "#ff2121"
+
+# Cor primária (botões, foco, etc.)
+primaryColor = "#2eef0c"
+
+
