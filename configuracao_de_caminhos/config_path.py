@@ -13,6 +13,6 @@ PASTA_IMAGENS = APP_RAG / "front_end" / "imagens"
 PASTA_PROMPT = APP_RAG / "prompt"
 
 # 3. Garante que as pastas de banco e arquivos existam no SO do usuário
-PASTA_BANCO_PROD = "pasta_banco_para_producao" / "banco_em_produção"
+PASTA_BANCO_PROD = Path("pasta_banco_para_producao") / "banco_em_produção"
 
 PASTA_BANCO_PROD.mkdir(parents=True, exist_ok=True)
