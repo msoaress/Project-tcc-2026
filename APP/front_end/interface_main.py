@@ -15,13 +15,13 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')
 
 
 
-import APP_.prompt.conf_prompt as conf_prompt
+import APP.prompt.conf_prompt as conf_prompt
 import streamlit as st
 import subprocess
 import os
-import APP_.busca_vetorial.busca_vetorial as busca_vetorial 
-from APP_.Rag.llm_resposta_usuario import chat_assistente
-from APP_.datas_horas.dat import datas
+import APP.busca_vetorial.busca_vetorial as busca_vetorial 
+from APP.Rag.llm_resposta_usuario import chat_assistente
+from APP.datas_horas.dat import datas
 
 
 # variaveis globais
