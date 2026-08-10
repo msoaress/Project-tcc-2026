@@ -67,7 +67,7 @@ Responsável pela interface do usuário e orquestração da busca semântica com
 ```text
 ┌────────────────────────────────────────────────────────┐
 │               Interface do Usuário (Streamlit)         │
-│             APP_RAG/front_end/interface_main.py        │
+│             APP/front_end/interface_main.py        │
 └───────────────────────────┬────────────────────────────┘
                             │
                     Pergunta do Usuário
@@ -75,7 +75,7 @@ Responsável pela interface do usuário e orquestração da busca semântica com
                             ▼
 ┌────────────────────────────────────────────────────────┐
 │                    Orquestrador RAG                    │
-│           APP_RAG/Rag/llm_resposta_usuario.py          │
+│           APP/Rag/llm_resposta_usuario.py          │
 └───────────────────────────┬────────────────────────────┘
                             │
             ┌───────────────┴───────────────┐
@@ -112,14 +112,10 @@ projeto-assistente-ia-v3.0/
 ├── .vscode/
 │   └── settings.json
 │
-├── APP_BANCO/
-│   ├── banco/
-│   │   └── chroma.sqlite3
-│   ├── pdf/
-│   ├── dbCreate.py
-│   └── main.py
+├── banco_em_produção/producao
 │
-├── APP_RAG/
+│
+├── APP/
 │   ├── busca_vetorial/
 │   │   └── busca_vetorial.py
 │   ├── front_end/
@@ -193,21 +189,8 @@ ollama pull llama3.1:8b # ou o modelo de sua preferência
 ollama pull snowflake-arctic-embed2:568m # e importante que o mesmo modelo usado para criar os embeddigns, seja o memso usado na busca #vetorial
 ```
 
-## 4. Gerar a Base Vetorial
 
-Adicione os PDFs na pasta:
-
-```text
-APP_BANCO/pdf/
-```
-
-Em seguida execute:
-
-```bash
-python APP_BANCO/main.py
-```
-
-## 5. Iniciar a Aplicação
+## 4. Iniciar a Aplicação
 
 ```bash
 
@@ -255,14 +238,6 @@ http://localhost:8501
 
 * Streamlit
 
-### Processamento de Documentos
-
-* PyMuPDF
-* PyPDF
-
-
----
-
 # 🔐 Segurança e Privacidade
 
 * Execução 100% local
@@ -275,5 +250,5 @@ http://localhost:8501
 
 # 📄 Licença
 
-**Projeto de uso interno.**
+**open source**
 
