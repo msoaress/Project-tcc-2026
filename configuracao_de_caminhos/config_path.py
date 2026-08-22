@@ -5,13 +5,13 @@ from pathlib import Path
 RAIZ_PROJETO = Path(__file__).resolve().parent.parent
 
 # 2. Mapeamento genérico de todas as pastas que você usa
-APP_BANCO = RAIZ_PROJETO / "APP_BANCO"
-APP= RAIZ_PROJETO / "APP_RAG"
+APP_BANCO = RAIZ_PROJETO / "pasta_banco_para_producao"
+APP = RAIZ_PROJETO / "APP"
 
 # Subpastas específicas
-PASTA_IMAGENS = APP= RAIZ_PROJETO / "APP" / "front_end" / "imagens"
-PASTA_PROMPT = APP= RAIZ_PROJETO / "APP" / "prompt"
-
+PASTA_IMAGENS = APP= / "front_end" / "imagens"
+PASTA_PROMPT = APP= / "prompt"
+PASTA_BANCO_PROD = APP_BANCO = / "banco_em_produção"
 # 3. Garante que as pastas de banco e arquivos existam no SO do usuário
 PASTA_BANCO_PROD = Path("pasta_banco_para_producao") / "banco_em_produção"
 
