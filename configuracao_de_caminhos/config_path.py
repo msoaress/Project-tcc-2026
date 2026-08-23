@@ -3,7 +3,7 @@ from pathlib import Path
 
 # 1. O Python descobre automaticamente onde a pasta "projeto assistente Ia - versão 2.0" está no computador atual
 RAIZ_PROJETO = Path(__file__).resolve().parent.parent
-
+print(f"RAIZ_PROJETO: {RAIZ_PROJETO}")
 # 2. Mapeamento genérico de todas as pastas que você usa
 APP_BANCO = RAIZ_PROJETO / "pasta_banco_para_producao"
 APP = RAIZ_PROJETO / "APP"
