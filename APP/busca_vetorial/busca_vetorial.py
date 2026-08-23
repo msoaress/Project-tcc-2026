@@ -36,7 +36,8 @@ class BuscaVetorial:
         self.lista_completa_dados_recuperados = []
         self.texto_formatado = ""
         self.quantidade_de_documentos = 0
-        self.endereco_bank = "/home/mateus-soares/Documentos/Project_tcc_2026/assistente-versao-v3.0/pasta_banco_para_producao/banco_em_produção"
+        self.endereco_bank = PASTA_BANCO_PROD
+
 
     
 
