@@ -11,7 +11,7 @@ class chat_assistente:
 
     # modelos disponiveis
 
-       self.modelos_locais =["llama-3.1-8b-instant"]
+       self.modelos_locais =["gemma-2b"]
        self.api=st.secrets["api_key"]
 
 
