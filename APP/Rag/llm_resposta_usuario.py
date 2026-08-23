@@ -11,7 +11,7 @@ class chat_assistente:
 
     # modelos disponiveis
 
-       self.modelos_locais =["gemma-2b"]
+       self.modelos_locais =["openai/gpt-oss-120b"]
        self.api=st.secrets["api_key"]
 
 
