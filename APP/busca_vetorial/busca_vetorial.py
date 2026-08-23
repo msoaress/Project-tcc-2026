@@ -126,10 +126,7 @@ class BuscaVetorial:
 
             # Comando para desligar o modelo específico instantaneamente
 
-            subprocess.run(["ollama", "stop", "snowflake-arctic-embed2:568m"], check=True)
-            print("Modelo descarregado da memória com sucesso!")
-
-
+     
 
 
 
@@ -188,8 +185,7 @@ class BuscaVetorial:
 
                     # Comando para desligar o modelo específico instantaneamente
 
-        subprocess.run(["ollama", "stop", "snowflake-arctic-embed2:568m"], check=True)
-        #print("Modelo descarregado da memória com sucesso!")
+
         return self.texto_formatado
 
 
