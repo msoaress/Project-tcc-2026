@@ -1,6 +1,7 @@
+from anyio import sleep
 import chromadb
 import subprocess
-from chromadb.utils.embedding_functions.ollama_embedding_function import OllamaEmbeddingFunction
+from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
 import os
 import sys
 from pathlib import Path
@@ -23,31 +24,38 @@ class BuscaVetorial:
 
     def __init__(self, texto):
          
-        self.OLLAMA_API_KEY = "b048a2e8e22341508c1e9f8145d2ff42"
         self.texto = texto
-        self.meu_embedding_function = OllamaEmbeddingFunction(url="https://ollama.com", model_name = "snowflake-arctic-embed2:568m")
+        
+        self.embedding_function = SentenceTransformerEmbeddingFunction(
+            model_name="ibm-granite/granite-embedding-311m-multilingual-r2",
+            device="cpu",
+
+        )
         
         self.lista_dados_recuperados = []
         self.lista_completa_dados_recuperados = []
         self.texto_formatado = ""
         self.quantidade_de_documentos = 0
-        self.endereco_bank = str(PASTA_BANCO_PROD)
+        self.endereco_bank = "/home/mateus-soares/Documentos/Project_tcc_2026/assistente-versao-v3.0/pasta_banco_para_producao/banco_em_produção"
 
     
 
 
     def recuperar_informacao(self):
-        
+        print("estou aqui")
 
         path = self.endereco_bank
+        print(path)
             # Verifica se o banco existe e é válido
         db_file = os.path.join(path, "chroma.sqlite3")
+        print(db_file) 
         quantidade_arq = len(os.listdir(path))
-        
+        print(quantidade_arq) 
         if  (os.path.exists(db_file)) and (quantidade_arq >= 2):       
 
 
-            #print(db_file)   
+            print(db_file)   
+            
             
             client = chromadb.PersistentClient(self.endereco_bank)
 
@@ -70,7 +78,7 @@ class BuscaVetorial:
             for nome in nome_colecao:
                 
                 collection = client.get_collection(name = nome,
-                                                            embedding_function = self.meu_embedding_function,
+                                                            embedding_function = self.embedding_function,
                                                                                                         
                                                             )
                 
@@ -104,8 +112,8 @@ class BuscaVetorial:
 
                 self.lista_completa_dados_recuperados.extend(self.lista_dados_recuperados)  
 
-            #for x, dados in enumerate(self.lista_completa_dados_recuperados):
-            #        print(f"dados recuperados {x}: \n {dados} \n")   
+            for x, dados in enumerate(self.lista_completa_dados_recuperados):
+                   print(f"dados recuperados {x}: \n {dados} \n")   
 
             return 1        
 
@@ -136,7 +144,7 @@ class BuscaVetorial:
 
 
             if self.lista_completa_dados_recuperados[0]["Distância"] <= coseno:
-                #print("O documento é relevante para a consulta.")
+                print("O documento é relevante para a consulta.")
 
                 return 1
 
@@ -154,13 +162,13 @@ class BuscaVetorial:
         self.lista_completa_dados_recuperados.sort(key=lambda x: x["Distância"])
 
 
-        #for x, dados in enumerate(self.lista_completa_dados_recuperados):
+        for x, dados in enumerate(self.lista_completa_dados_recuperados):
                 
-        #print(f"dados recuperados ordenados {x}: \n {dados} \n")
-        #print(f"quantidade de documentos recuperados: {self.quantidade_de_documentos} \n")
-        #print(f"quantidade de dados recuperados: {len(self.lista_completa_dados_recuperados)} \n")
+         print(f"dados recuperados ordenados {x}: \n {dados} \n")
+         print(f"quantidade de documentos recuperados: {self.quantidade_de_documentos} \n")
+         print(f"quantidade de dados recuperados: {len(self.lista_completa_dados_recuperados)} \n")
 
-
+        sleep(10)
 
 
         if similaridade_coseno():

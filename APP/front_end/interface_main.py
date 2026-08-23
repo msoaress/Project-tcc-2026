@@ -202,7 +202,7 @@ if prompt is not None:
                 db = busca_vetorial.BuscaVetorial(prompt)
                 if db.recuperar_informacao():
                         recupera_informacao_db_vetorial = db.ordenação_de_dados()
-                # print(f"informação recuperada: \n {recupera_informacao} \n")
+                        print(f"informação recuperada: \n {recupera_informacao_db_vetorial} \n")
 
 
                 else: 
