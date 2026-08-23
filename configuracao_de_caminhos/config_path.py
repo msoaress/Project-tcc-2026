@@ -9,9 +9,9 @@ APP_BANCO = RAIZ_PROJETO / "pasta_banco_para_producao"
 APP = RAIZ_PROJETO / "APP"
 
 # Subpastas específicas
-PASTA_IMAGENS = APP= / "front_end" / "imagens"
-PASTA_PROMPT = APP= / "prompt"
-PASTA_BANCO_PROD = APP_BANCO = / "banco_em_produção"
+PASTA_IMAGENS = APP / "front_end" / "imagens"
+PASTA_PROMPT = APP / "prompt"
+PASTA_BANCO_PROD = APP_BANCO  / "banco_em_produção"
 # 3. Garante que as pastas de banco e arquivos existam no SO do usuário
 PASTA_BANCO_PROD = Path("pasta_banco_para_producao") / "banco_em_produção"
 
