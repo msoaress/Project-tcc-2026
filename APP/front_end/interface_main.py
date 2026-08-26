@@ -114,8 +114,7 @@ with st.sidebar:
 
         # texto para o rodapé da barra lateral
            
-#""" st.sidebar.space(2)
-      #    st.sidebar.link_button(label = ':violet[official website paineira] ',url ='https://lnls.cnpem.br/#facilities/paineira/',width = 'stretch',type='secondary',icon = '🌐')"""
+
 
 
 
