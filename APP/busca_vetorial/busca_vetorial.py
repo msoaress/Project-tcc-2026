@@ -158,13 +158,6 @@ class BuscaVetorial:
         self.lista_completa_dados_recuperados.sort(key=lambda x: x["Distância"])
 
 
-        for x, dados in enumerate(self.lista_completa_dados_recuperados):
-                
-         print(f"dados recuperados ordenados {x}: \n {dados} \n")
-         print(f"quantidade de documentos recuperados: {self.quantidade_de_documentos} \n")
-         print(f"quantidade de dados recuperados: {len(self.lista_completa_dados_recuperados)} \n")
-
-        sleep(10)
 
 
         if similaridade_coseno():
