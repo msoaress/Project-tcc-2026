@@ -11,10 +11,10 @@ class chat_assistente:
 
     # modelos disponiveis
 
-       self.modelos_locais =["llama-3.1-8b-instant"]
+       self.modelos_locais =["openai/gpt-oss-120b"]
        self.api=st.secrets["api_key"]
 
-       self.api=""
+      
 
 
 
