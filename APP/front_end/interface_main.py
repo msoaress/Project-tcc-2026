@@ -76,7 +76,7 @@ st.set_page_config(
 
 with st.sidebar:
     with st.sidebar.container(horizontal_alignment="center",height= 250,border=False):
-            st.image(str(PASTA_IMAGENS / "ChatGPT Image 8 de ago. de 2026, 17_26_16.png"), width=300)
+            st.image(str(PASTA_IMAGENS / "image_a0dc1a89.jpg"), width=300)
 
 
 # imagem logo flor de paineira  decorativa da barra lateral
